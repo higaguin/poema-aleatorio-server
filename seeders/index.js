@@ -1,4 +1,5 @@
 const models = require("../models");
+const keys = require("../config/keys");
 
 const doSeed = async () => {
   await Promise.all([models.Poet.deleteMany({}), models.Poem.deleteMany({})]);
@@ -8,7 +9,7 @@ const doSeed = async () => {
     origin: "Mexicano",
     bio:
       "Poeta, ensayista, dramaturgo y diplomático mexicano. Obtuvo el premio Nobel de literatura en 1990 y el premio Cervantes en 1981.",
-    image: "http://localhost:5000/img/octavio-paz.png"
+    image: `${keys.domain}/img/octavio-paz.png`
   });
 
   const jose_emilio = new models.Poet({
@@ -16,7 +17,7 @@ const doSeed = async () => {
     origin: "Mexicano",
     bio:
       "Famoso escritor mexicano principalmente por su poesía, aunque cultivó con éxito también la crónica, la novela, el cuento, el ensayo y la traducción.",
-    image: "http://localhost:5000/img/jose-emilio-pacheco.png"
+    image: `${keys.domain}/img/jose-emilio-pacheco.png`
   });
 
   const amado_nervo = new models.Poet({
@@ -24,7 +25,7 @@ const doSeed = async () => {
     origin: "Mexicano",
     bio:
       "Poeta y escritor mexicano, perteneciente al movimiento modernista. Fue miembro correspondiente de la Academia Mexicana de la Lengua, no pudo ser miembro de número por residir en el extranjero.",
-    image: "http://localhost:5000/img/jose-emilio-pacheco.png"
+    image: `${keys.domain}/img/amado-nervo.png`
   });
 
   const federico_garcia_lorca = new models.Poet({
@@ -32,7 +33,7 @@ const doSeed = async () => {
     origin: "Español",
     bio:
       "Poeta, dramaturgo y prosista español, conocido por su destreza en muchas otras artes. Adscrito a la generación del 27, fue el poeta de mayor influencia y popularidad de la literatura española del siglo xx.",
-    image: "http://localhost:5000/img/federico_garcia_lorca.png"
+    image: `${keys.domain}/img/federico_garcia_lorca.png`
   });
 
   const jaime_sabines = new models.Poet({
@@ -40,7 +41,7 @@ const doSeed = async () => {
     origin: "Mexicano",
     bio:
       "Poeta y político mexicano, considerado como uno de los grandes poetas mexicanos del siglo XX.",
-    image: "http://localhost:5000/img/jaime-sabines.png"
+    image: `${keys.domain}/img/jaime-sabines.png`
   });
 
   const julio_cortazar = new models.Poet({
@@ -48,7 +49,7 @@ const doSeed = async () => {
     origin: "Argentino",
     bio:
       "Escritor, traductor e intelectual argentino. Sin renunciar a su nacionalidad argentina, optó por la nacionalidad francesa en 1981, en protesta contra el régimen militar argentino",
-    image: "http://localhost:5000/img/julio-cortazar.png"
+    image: `${keys.domain}/img/julio-cortazar.png`
   });
 
   const justo_sierra = new models.Poet({
@@ -56,7 +57,7 @@ const doSeed = async () => {
     origin: "Mexicano",
     bio:
       "Escritor, historiador, periodista, poeta, político y filósofo mexicano, discípulo de Ignacio Manuel Altamirano. Fue decidido promotor de la fundación de la Universidad Nacional de México",
-    image: "http://localhost:5000/img/justo-sierra.png"
+    image: `${keys.domain}/img/justo-sierra.png`
   });
 
   const mario_benedetti = new models.Poet({
@@ -64,7 +65,7 @@ const doSeed = async () => {
     origin: "Uruguayo",
     bio:
       "Escritor, poeta, dramaturgo y periodista uruguayo integrante de la generación del 45, a la que pertenecieron, entre otros, Idea Vilariño y Juan Carlos Onetti.",
-    image: "http://localhost:5000/img/mario-benedetti.png"
+    image: `${keys.domain}/img/mario-benedetti.png`
   });
 
   const pablo_neruda = new models.Poet({
@@ -72,7 +73,7 @@ const doSeed = async () => {
     origin: "Chileno",
     bio:
       "Monarca (tlatoani) de la ciudad-estado de Texcoco en el México antiguo y se convirtió en el principal aliado militar y político de los mexicas.",
-    image: "http://localhost:5000/img/pablo-neruda.png"
+    image: `${keys.domain}/img/pablo-neruda.png`
   });
 
   const nezahualcoyotl = new models.Poet({
@@ -80,7 +81,7 @@ const doSeed = async () => {
     origin: "Mexica",
     bio:
       "Monarca (tlatoani) de la ciudad-estado de Texcoco en el México antiguo y se convirtió en el principal aliado militar y político de los mexicas.",
-    image: "http://localhost:5000/img/nezahualcoyotl.png"
+    image: `${keys.domain}/img/nezahualcoyotl.png`
   });
 
   const sor_juana = new models.Poet({
@@ -88,7 +89,7 @@ const doSeed = async () => {
     origin: "Mexicano",
     bio:
       "Religiosa jerónima y escritora novohispana, exponente del Siglo de Oro de la literatura en español.",
-    image: "http://localhost:5000/img/sor-juana.png"
+    image: `${keys.domain}/img/sor-juana.png`
   });
 
   await octavio.save(err => {

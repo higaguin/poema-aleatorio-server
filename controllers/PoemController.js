@@ -6,7 +6,7 @@ let poemController = {};
 poemController.random = (req, res) => {
   models.Poem.count().exec((err, count) => {
     let random = Math.floor(Math.random() * count);
-    //
+
     models.Poem.findOne()
       .skip(random)
       .populate("poet")
