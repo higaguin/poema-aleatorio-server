@@ -4,7 +4,13 @@ const models = require("../models");
 let poemController = {};
 
 poemController.random = (req, res) => {
-  res.send(models.Poem.count().exec((err, count) => { if (err) { res.send({ error: err }); } else { res.send(count); } })
+  models.Poem.count().exec((err, count) => {
+    if (err) {
+      res.send({ error: err });
+    } else {
+      res.send(count);
+    }
+  });
   // models.Poem.count().exec((err, count) => {
   //   let random = Math.floor(Math.random() * count);
   //   //
