@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "seed": "node seeders/index.js"
+    "start": "node index.js"
   },
   "author": "higaguin",
   "license": "ISC",
