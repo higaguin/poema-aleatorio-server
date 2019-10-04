@@ -33,7 +33,7 @@ const doSeed = async () => {
     origin: "Español",
     bio:
       "Poeta, dramaturgo y prosista español, conocido por su destreza en muchas otras artes. Adscrito a la generación del 27, fue el poeta de mayor influencia y popularidad de la literatura española del siglo xx.",
-    image: `${keys.domain}/img/federico_garcia_lorca.png`
+    image: `${keys.domain}/img/federico-garcia-lorca.png`
   });
 
   const jaime_sabines = new models.Poet({
